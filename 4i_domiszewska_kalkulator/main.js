@@ -164,29 +164,25 @@ numwynik.addEventListener(`click`, function(evt)
 
 p.innerHTML+=numwynik.value
 
-
-if(operacja==`+`){
-    p.innerHTML+=eval(liczba)+eval(liczba2)
-}else if(operacja=='-'){
-    p.innerHTML+=eval(liczba)-eval(liczba2)
-}else if(operacja=='/'){
+switch (operacja){
+case `+`:
+    p.innerHTML+=Number(liczba)+Number(liczba2);
+    break;
+case `-`:
+    p.innerHTML+=Number(liczba)+Number(liczba2);
+    break;
+case `/`:
     if(liczba2==0){
-        p.innerText='nie da sie dzielić przez 0'
-    }else
-    p.innerHTML+=eval(liczba)/eval(liczba2)
-}else if(operacja=='*'){
-    p.innerHTML+=eval(liczba)*eval(liczba2)
+        p.innerText='nie da sie dzielić przez 0';
+        break;
+    }
+    p.innerHTML+=Number(liczba)/Number(liczba2);
+    break;
+case `*`:
+    p.innerHTML+=Number(liczba)*Number(liczba2);
+    break;
+
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
